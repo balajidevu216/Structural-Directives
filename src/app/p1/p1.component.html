@@ -1,0 +1,31 @@
+<h1 *ngIf ="status;then trueBlock else elseBlock"></h1>
+
+<ng-template then #trueBlock>
+ <h1>trueBlock Applied {{name1}}</h1>
+</ng-template>
+
+<ng-template else #elseBlock>
+ <h1>elseBlock Applied {{name1}}</h1>
+</ng-template>
+
+
+<div class="For" *ngFor = "let x of subjects ; even as e ">
+<h2>{{e}}-->{{x}}</h2>
+</div>
+
+ <div [ngSwitch] = "myChoice">
+ <div class = SwitchCase>
+  <div *ngSwitchCase = "'one'">
+  First attempt success
+  </div>
+  <div *ngSwitchCase = "'two'">
+  Second attempt success
+  </div>
+  <div *ngSwitchCase = "'third'">
+  Third attempt success
+  </div>
+  <div *ngSwitchDefault>
+  Invalid Choice
+  </div>
+  </div>
+ </div>
